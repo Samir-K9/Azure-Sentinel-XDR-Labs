@@ -16,8 +16,8 @@ This project documents the full setup of a cloud-based SOC lab environment using
 1. [Sign Up for Office 365 E5 Trial (No Teams)](#1-sign-up-for-office-365-e5-trial-no-teams)
 2. [Assign Microsoft 365 E5 Licence to Your User](#2-assign-microsoft-365-e5-licence-to-your-user)
 3. [Create a Microsoft Azure Portal Account](#3-create-a-microsoft-azure-portal-account)
-4. [Setup Log Analytics Workspace](#4-setup-log-analytics-workspace)
-5. [Setup Microsoft Sentinel](#5-setup-microsoft-sentinel)
+4. [Set Up a Billing Alert in Azure](#4-set-up-a-billing-alert-in-azure)
+5. [Create a Log Analytics Workspace](#5-create-a-log-analytics-workspace)
 6. [Setup Microsoft Defender XDR](#6-setup-microsoft-defender-xdr)
 7. [Ingest Training Logs](#7-ingest-training-logs)
 8. [Create Workbook](#8-create-workbook)
@@ -41,7 +41,7 @@ Signed up for the Office 365 (no Teams) E5 trial, which activates a Microsoft 36
 
 Assigned the Microsoft 365 E5 licence to my user account in the Microsoft 365 admin centre. This activates the full suite of security features under that account, including Microsoft Defender for Endpoint and Defender for Office 365, which are required for the lab environment.
 
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/54ed9977c486c3d334af3d85e4d2a1c7de0b926e/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20115948.png))
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/54ed9977c486c3d334af3d85e4d2a1c7de0b926e/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20115948.png)
 
 ---
 
@@ -53,23 +53,23 @@ Created a Microsoft Azure portal account with a free trial. This links the Azure
 
 ---
 
-### 4. Setup Log Analytics Workspace
+### 4. Set Up a Billing Alert in Azure
 
-Created a Log Analytics Workspace — the central data store where all logs are collected and queried.
+Configured a billing alert in the Azure Cost Management portal to monitor spending and avoid unexpected charges during the lab. Set a budget threshold so an email notification is triggered if costs approach the defined limit.
 
-![Log Analytics Workspace](screenshots/04-log-analytics-workspace.png)
-
----
-
-### 5. Setup Billing Alert in Azure.
-
-Deployed Microsoft Sentinel on top of the Log Analytics Workspace to enable SIEM capabilities including detection, investigation, and response.
-
-![Microsoft Sentinel Setup](screenshots/05-sentinel-setup.png)
+![Image Alt]([screenshots/04-log-analytics-workspace.png](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/c547ca00972c2f7669dee5d97a79a1a3934dcbb7/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20121112.png)
 
 ---
 
-### 6. Setup Microsoft Defender XDR
+### 5.Create a Log Analytics Workspace
+
+Created a Log Analytics Workspace in the Azure portal. This serves as the central data store where all logs and security events are collected, stored, and queried. Microsoft Sentinel is built on top of the Log Analytics Workspace, making this a foundational step before any detection or monitoring can be configured.
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/405f12d26e3eab881ec977ae8f2e29f19b1126bb/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20121711.png))
+
+---
+
+### 6. Setup Microsoft Sentinel
 
 Activated Microsoft Defender XDR to provide extended detection and response coverage across endpoints, identity, and cloud apps.
 
