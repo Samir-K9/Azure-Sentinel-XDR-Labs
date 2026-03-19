@@ -57,15 +57,15 @@ Created a Microsoft Azure portal account with a free trial. This links the Azure
 
 Configured a billing alert in the Azure Cost Management portal to monitor spending and avoid unexpected charges during the lab. Set a budget threshold so an email notification is triggered if costs approach the defined limit.
 
-![Image Alt]([screenshots/04-log-analytics-workspace.png](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/c547ca00972c2f7669dee5d97a79a1a3934dcbb7/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20121112.png)
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/c547ca00972c2f7669dee5d97a79a1a3934dcbb7/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20121112.png)
 
 ---
 
-### 5.Create a Log Analytics Workspace
+### 5. Create a Log Analytics Workspace
 
 Created a Log Analytics Workspace in the Azure portal. This serves as the central data store where all logs and security events are collected, stored, and queried. Microsoft Sentinel is built on top of the Log Analytics Workspace, making this a foundational step before any detection or monitoring can be configured.
 
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/405f12d26e3eab881ec977ae8f2e29f19b1126bb/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20121711.png))
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/405f12d26e3eab881ec977ae8f2e29f19b1126bb/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20121711.png)
 
 ---
 
