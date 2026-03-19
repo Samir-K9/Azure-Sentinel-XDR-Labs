@@ -18,7 +18,7 @@ This project documents the full setup of a cloud-based SOC lab environment using
 3. [Create a Microsoft Azure Portal Account](#3-create-a-microsoft-azure-portal-account)
 4. [Set Up a Billing Alert in Azure](#4-set-up-a-billing-alert-in-azure)
 5. [Create a Log Analytics Workspace](#5-create-a-log-analytics-workspace)
-6. [Setup Microsoft Defender XDR](#6-setup-microsoft-defender-xdr)
+6. [Set Up Microsoft Sentinel](#6-set-up-microsoft-sentinel)
 7. [Ingest Training Logs](#7-ingest-training-logs)
 8. [Create Workbook](#8-create-workbook)
 9. [Connect Microsoft Defender XDR to Sentinel](#9-connect-microsoft-defender-xdr-to-sentinel)
@@ -31,7 +31,7 @@ This project documents the full setup of a cloud-based SOC lab environment using
 
 ### 1. Sign Up for Office 365 E5 Trial (No Teams)
 
-Signed up for the Office 365 (no Teams) E5 trial, which activates a Microsoft 365 E5 trial license. This license includes access to Microsoft Defender for Endpoint and Microsoft Defender for Office 365 — both essential for building out the detection and response capabilities used throughout this lab.
+Signed up for the Office 365 (no Teams) E5 trial, which activates a Microsoft 365 E5 trial license. This license includes access to Microsoft Defender for Endpoint and Microsoft Defender for Office 365 which are both essential for building out the detection and response capabilities used throughout this lab.
 
 ![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/e827e19335fc03c1aef943cd5ef8b839163defed/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20114713.png)
 
@@ -69,11 +69,14 @@ Created a Log Analytics Workspace in the Azure portal. This serves as the centra
 
 ---
 
-### 6. Setup Microsoft Sentinel
+### 6. Set Up Microsoft Sentinel
 
-Activated Microsoft Defender XDR to provide extended detection and response coverage across endpoints, identity, and cloud apps.
+Deployed Microsoft Sentinel and connected it to the Log Analytics Workspace created in the previous step. Sentinel acts as the SIEM and SOAR solution for this lab, providing a centralised platform for threat detection, incident investigation, and automated response across the environment.
 
-![Defender XDR Setup](screenshots/06-defender-xdr-setup.png)
+> [!NOTE]
+> Microsoft Sentinel has migrated to the Microsoft Defender portal. All Sentinel features including incidents, analytics rules, and workbooks are now accessible directly within the unified Defender portal, bringing SIEM and XDR capabilities together in a single interface.
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/8d1f44715102abbff8fdecccafc6bfbc194f3354/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20122426.png))
 
 ---
 
