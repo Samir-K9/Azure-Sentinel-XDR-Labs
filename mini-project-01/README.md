@@ -14,7 +14,7 @@ This project documents the full setup of a cloud-based SOC lab environment using
 ## Table of Contents
 
 1. [Sign Up for Office 365 E5 Trial (No Teams)](#1-sign-up-for-office-365-e5-trial-no-teams)
-2. [Setup Billing](#2-setup-billing)
+2. [Assign Microsoft 365 E5 Licence to Your User](#2-assign-microsoft-365-e5-licence-to-your-user)
 3. [Create Windows Virtual Machine](#3-create-windows-virtual-machine)
 4. [Setup Log Analytics Workspace](#4-setup-log-analytics-workspace)
 5. [Setup Microsoft Sentinel](#5-setup-microsoft-sentinel)
@@ -33,15 +33,15 @@ This project documents the full setup of a cloud-based SOC lab environment using
 
 Signed up for the Office 365 (no Teams) E5 trial, which activates a Microsoft 365 E5 trial license. This license includes access to Microsoft Defender for Endpoint and Microsoft Defender for Office 365 — both essential for building out the detection and response capabilities used throughout this lab.
 
-![Azure Account Setup](screenshots/01-azure-account.png)
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/e827e19335fc03c1aef943cd5ef8b839163defed/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20114713.png)
 
 ---
 
-### 2. Setup Billing
+### 2. Assign Microsoft 365 E5 Licence to Your User
 
-Configured billing settings to manage costs and ensure the lab environment stays within budget.
+Assigned the Microsoft 365 E5 licence to my user account in the Microsoft 365 admin centre. This activates the full suite of security features under that account, including Microsoft Defender for Endpoint and Defender for Office 365, which are required for the lab environment.
 
-![Billing Setup](screenshots/02-billing-setup.png)
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/54ed9977c486c3d334af3d85e4d2a1c7de0b926e/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20115948.png))
 
 ---
 
