@@ -15,7 +15,7 @@ This project documents the full setup of a cloud-based SOC lab environment using
 
 1. [Sign Up for Office 365 E5 Trial (No Teams)](#1-sign-up-for-office-365-e5-trial-no-teams)
 2. [Assign Microsoft 365 E5 Licence to Your User](#2-assign-microsoft-365-e5-licence-to-your-user)
-3. [Create Windows Virtual Machine](#3-create-windows-virtual-machine)
+3. [Create a Microsoft Azure Portal Account](#3-create-a-microsoft-azure-portal-account)
 4. [Setup Log Analytics Workspace](#4-setup-log-analytics-workspace)
 5. [Setup Microsoft Sentinel](#5-setup-microsoft-sentinel)
 6. [Setup Microsoft Defender XDR](#6-setup-microsoft-defender-xdr)
@@ -45,11 +45,11 @@ Assigned the Microsoft 365 E5 licence to my user account in the Microsoft 365 ad
 
 ---
 
-### 3. Create Windows Virtual Machine
+### 3. Create a Microsoft Azure portal account.
 
-Deployed a Windows Virtual Machine in Azure to act as the endpoint generating logs and events for monitoring.
+Created a Microsoft Azure portal account with a free trial. This links the Azure environment to the existing Microsoft 365 tenant, allowing resources like Log Analytics Workspace and Microsoft Sentinel to be deployed and connected to the security tools already configured in the Microsoft 365 admin centre.
 
-![Windows VM Creation](screenshots/03-windows-vm.png)
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/4d9ae558838250b4427ed21d5ca971d7d015fe84/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20120547.png)
 
 ---
 
@@ -61,7 +61,7 @@ Created a Log Analytics Workspace — the central data store where all logs are 
 
 ---
 
-### 5. Setup Microsoft Sentinel
+### 5. Setup Billing Alert in Azure.
 
 Deployed Microsoft Sentinel on top of the Log Analytics Workspace to enable SIEM capabilities including detection, investigation, and response.
 
