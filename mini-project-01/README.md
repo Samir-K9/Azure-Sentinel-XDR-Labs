@@ -148,6 +148,23 @@ Once saved, the rule successfully triggered an alert in Microsoft Sentinel, conf
 
 ![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/4d00f297e255e47a583b3a52b4da1c2436273543/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20121640.png)
 
+### 13. Create a Bookmark for a Suspicious Event
+
+While investigating the Microsoft Sentinel Training Lab sample data, identified a suspicious `FileAccessed` event originating from an unknown IP address. Bookmarked the event to preserve it as evidence and flag it for further investigation.
+
+Query Used:
+```
+OfficeActivity_CL 
+|where Operation_s == "FileAccessed"
+```
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/7ad1690f88a7510376c67eaaf4f716901f9e3efd/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20124437.png)
+
+Next, this bookmark was escaled as an incident for further investigation.
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/9836c38d1f3cf5a5fbb920bc8dd71999b17eed86/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20125414.png)
+
+
+
 
 
 
@@ -156,12 +173,17 @@ Once saved, the rule successfully triggered an alert in Microsoft Sentinel, conf
 
 ## Key Takeaways
 
-- Setting up the Log Analytics Workspace first is critical — everything else in Sentinel depends on it
-- Connecting Defender XDR to Sentinel gives a unified view of incidents, which is how most enterprise SOCs operate
-- Bookmarks are a simple but powerful way to track evidence during an investigation
-- Having training logs available from the start made it much easier to test rules and queries without waiting for real events
-
+- The Log Analytics Workspace is the foundation of the entire setup because Sentinel cannot be deployed without it.
+- Connecting Defender XDR to Sentinel unifies alerts across endpoints, identity, and email into a single investigation interface.
+- The Training Lab solution provides realistic sample data to test detection rules and queries without needing live events.
+- Writing KQL queries to detect evens showed how attack patterns like brute force can be translated into actionable alerts.
+- Building a Sentinel Workbook provides a visual dashboard for monitoring and identifying suspicious patterns.
+- Bookmarks can help track suspicious findings which can be escalated as incidents for further investigation.
 ---
+
+'''
+- Incident Report: Multiple Failed Logon Attempts
+
 
 ## What's Next
 
