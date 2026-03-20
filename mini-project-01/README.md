@@ -181,8 +181,10 @@ Next, this bookmark was escaled as an incident for further investigation.
 - Bookmarks can help track suspicious findings which can be escalated as incidents for further investigation.
 ---
 
-'''
-- Incident Report: Multiple Failed Logon Attempts
+## Findings & Incident Report
+After the brute force detection rule triggered an alert in the Microsoft Sentinel Training Lab, I investigated the incident using KQL queries to identify accounts with the most failed logons and determine whether any successful logins followed. The findings were documented in a formal incident report following a standard SOC reporting structure.
+
+[📄 View Incident Report](INCIDENT-REPORT.md)
 
 
 ## What's Next
