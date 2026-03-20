@@ -20,8 +20,8 @@ This project documents the full setup of a cloud-based SOC lab environment using
 5. [Create a Log Analytics Workspace](#5-create-a-log-analytics-workspace)
 6. [Set Up Microsoft Sentinel](#6-set-up-microsoft-sentinel)
 7. [Export Activity Logs from Azure Subscription to Log Analytics Workspace](#7-export-activity-logs-from-azure-subscription-to-log-analytics-workspace)
-8. [Create Workbook](#8-create-workbook)
-9. [Connect Microsoft Defender XDR to Sentinel](#9-connect-microsoft-defender-xdr-to-sentinel)
+8. [Install AzureActivity Solution from Content Hub](#8-install-azureactivity-solution-from-content-hub)
+10. [Create a Microsoft Sentinel Workbook](#10-create-a-microsoft-sentinel-workbook)
 10. [Create Alerts](#10-create-alerts)
 11. [Create Bookmarks](#11-create-bookmarks)
 
@@ -97,19 +97,23 @@ Installed the AzureActivity solution from the Content Hub in Microsoft Sentinel.
 
 ---
 
-### 9. Connect Microsoft Defender XDR to Sentinel
+### 9.  Install Microsoft Sentinel Training Lab Solution
 
-Configured the Defender XDR data connector in Sentinel to unify alerts and incidents across both platforms into a single investigation experience.
+Installed the Microsoft Sentinel Training Lab solution from the Azure portal. This deploys a set of pre-configured sample data, analytics rules, incidents, and workbooks designed specifically for hands-on learning into detection and investigating simulating a real-world production environment.
 
-![Defender XDR Connected to Sentinel](screenshots/09-xdr-sentinel-connection.png)
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/ccb96c9d2e3bfde3745967206293e63b3e2c4d5a/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20111946.png)
+
 
 ---
 
-### 10. Create Alerts
+### 10. Create a Microsoft Sentinel Workbook
 
-Created analytics rules in Sentinel to generate alerts based on specific conditions detected in the log data.
+Created a custom Microsoft Sentinel Workbook to visualise key authentication activity across the environment, including failed logins by account, successful logins by computer, and sign-in activity by location. This provides a centralised view for monitoring access patterns and identifying suspicious behaviour.
 
-![Alerts Created](screenshots/10-alerts.png)
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/bb24151d8bade3b2b63aefd26e4192ef9813d995/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20113544.png)
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/bb24151d8bade3b2b63aefd26e4192ef9813d995/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20113643.png)
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/bb24151d8bade3b2b63aefd26e4192ef9813d995/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20113702.png)
 
 ---
 
