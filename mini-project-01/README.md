@@ -21,9 +21,9 @@ This project documents the full setup of a cloud-based SOC lab environment using
 6. [Set Up Microsoft Sentinel](#6-set-up-microsoft-sentinel)
 7. [Export Activity Logs from Azure Subscription to Log Analytics Workspace](#7-export-activity-logs-from-azure-subscription-to-log-analytics-workspace)
 8. [Install AzureActivity Solution from Content Hub](#8-install-azureactivity-solution-from-content-hub)
+9. [Install Microsoft Sentinel Training Lab Solution](#9-install-microsoft-sentinel-training-lab-solution)
 10. [Create a Microsoft Sentinel Workbook](#10-create-a-microsoft-sentinel-workbook)
-10. [Create Alerts](#10-create-alerts)
-11. [Create Bookmarks](#11-create-bookmarks)
+11. [Install Microsoft Defender XDR Data Connector](#11-install-microsoft-defender-xdr-data-connector)
 
 ---
 
@@ -117,11 +117,12 @@ Created a custom Microsoft Sentinel Workbook to visualise key authentication act
 
 ---
 
-### 11. Create Bookmarks
+### 11. Install Microsoft Defender XDR Data Connector
 
-Used Sentinel's bookmark feature to flag and preserve key events during investigation for future reference.
+Installed the Microsoft Defender XDR data connector in Microsoft Sentinel to integrate alerts and incidents from Defender XDR into the Sentinel environment. For this lab, Microsoft Defender Alerts were selected so that it brings Defender alerts and associated evidence directly into Sentinel for investigation. This includes alerts from endpoint, office 365, cloud app security and identity platforms.
 
-![Bookmarks Created](screenshots/11-bookmarks.png)
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/d6827ef2eee5f37a14a7fdb067de908ad4847d98/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20115515.png)
 
 ---
 
