@@ -24,6 +24,8 @@ This project documents the full setup of a cloud-based SOC lab environment using
 9. [Install Microsoft Sentinel Training Lab Solution](#9-install-microsoft-sentinel-training-lab-solution)
 10. [Create a Microsoft Sentinel Workbook](#10-create-a-microsoft-sentinel-workbook)
 11. [Install Microsoft Defender XDR Data Connector](#11-install-microsoft-defender-xdr-data-connector)
+12. [Create a Detection Rule for Brute Force Attacks](#12-create-a-detection-rule-for-brute-force-attacks)
+
 
 ---
 
@@ -121,8 +123,34 @@ Created a custom Microsoft Sentinel Workbook to visualise key authentication act
 
 Installed the Microsoft Defender XDR data connector in Microsoft Sentinel to integrate alerts and incidents from Defender XDR into the Sentinel environment. For this lab, Microsoft Defender Alerts were selected so that it brings Defender alerts and associated evidence directly into Sentinel for investigation. This includes alerts from endpoint, office 365, cloud app security and identity platforms.
 
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/6fd5a47bda04ab66b893352f6ea5b983ecba9841/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20120256.png)
+
 
 ![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/d6827ef2eee5f37a14a7fdb067de908ad4847d98/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20115515.png)
+
+### 12.  Create a Detection Rule for Brute Force Attacks
+
+Created an analytics rule in Microsoft Sentinel using the sample data provided by the Training Lab solution to test and validate detection logic in the lab environment.
+The rule queries the SecurityEvent_CL table for Event ID 4625 (failed logon), summarises the count by account, and triggers an alert when an account reaches 1000 or more failed logons.As this is a test environment, the rule runs every 5 minutes against the last 1 day of data and generates a medium severity incident automatically when results are returned.
+
+Query used:
+```
+SecurityEvent_CL 
+|where EventID_s == "4625" 
+|summarize FailedLogons = count() by Account_s
+|where FailedLogons >= 1000
+|sort by FailedLogons desc
+```
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/cd999079eed241aaa341dbd52091d07e0c800527/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20121411.png)
+
+Once saved, the rule successfully triggered an alert in Microsoft Sentinel, confirming that the detection logic was working as expected against the training data.
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/4d00f297e255e47a583b3a52b4da1c2436273543/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20121640.png)
+
+
+
+
 
 ---
 
