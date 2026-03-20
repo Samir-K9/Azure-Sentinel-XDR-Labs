@@ -19,7 +19,7 @@ This project documents the full setup of a cloud-based SOC lab environment using
 4. [Set Up a Billing Alert in Azure](#4-set-up-a-billing-alert-in-azure)
 5. [Create a Log Analytics Workspace](#5-create-a-log-analytics-workspace)
 6. [Set Up Microsoft Sentinel](#6-set-up-microsoft-sentinel)
-7. [Ingest Training Logs](#7-ingest-training-logs)
+7. [Export Activity Logs from Azure Subscription to Log Analytics Workspace](#7-export-activity-logs-from-azure-subscription-to-log-analytics-workspace)
 8. [Create Workbook](#8-create-workbook)
 9. [Connect Microsoft Defender XDR to Sentinel](#9-connect-microsoft-defender-xdr-to-sentinel)
 10. [Create Alerts](#10-create-alerts)
@@ -80,19 +80,20 @@ Deployed Microsoft Sentinel and connected it to the Log Analytics Workspace crea
 
 ---
 
-### 7. Ingest Training Logs
+### 7. Export Activity Logs from Azure Subscription to Log Analytics Workspace
 
-Ingested sample training logs into the Log Analytics Workspace to simulate real event data for detection and analysis.
+Exported the Azure subscription's activity logs to the Log Analytics Workspace. Specifically administrative, security and alert logs were ingested.
 
-![Training Logs Ingested](screenshots/07-training-logs.png)
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/56cc2083e5f4df758dfc9dcdb751f161f37b6f97/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20105814.png)
+
 
 ---
 
-### 8. Create Workbook
+### 8. Install AzureActivity Solution from Content Hub
 
-Built a Sentinel Workbook to visualize ingested log data and monitor the environment at a glance.
+Installed the AzureActivity solution from the Content Hub in Microsoft Sentinel.This will enable the logs that we wanted to be exported from the Azure to be ingested into Microsoft Sentinel through pre-built data connectors, analytics rules, and workbooks specifically designed to monitor and detect threats based on Azure subscription activity logs.
 
-![Workbook Created](screenshots/08-workbook.png)
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/1909ea4991e7152046e003f1695ab38556b47b16/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20110736.png)
 
 ---
 
