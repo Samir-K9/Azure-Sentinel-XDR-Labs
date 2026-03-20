@@ -27,13 +27,16 @@ Upon further investigation, it was identified that there were no successful logo
 - Constant monitoring and alerting on any activities related to high privileged accounts.
 
 ## Evidence
-- Number of failed logons.
+#### Number of failed logons.
+
 ![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/adae989f1456d200968b830a4cb59d9ff0d84fcd/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20134736.png)
 
-- Time Range
+#### Time Range
+  
 ![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/d936c7272084b20716bc99bb274cb32cc5c99bce/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20140504.png)
 
-- No successful logons.
+#### No successful logons.
+  
 ![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/aac29e9f7b43437a18a2819ea01205f5d12e0834/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20140716.png)
 
 
