@@ -13,8 +13,8 @@ This project explores email threat detection and phishing simulation using the M
 
 ## Table of Contents
 
-1. [Sign Up for Office 365 E5 Trial (No Teams)](#1-sign-up-for-office-365-e5-trial-no-teams)
-2. [Assign Microsoft 365 E5 Licence to Your User](#2-assign-microsoft-365-e5-licence-to-your-user)
+1. [Create Users and Assign Microsoft 365 E5 Licences](#1-create-users-and-assign-microsoft-365-e5-licences)
+2. [Create a Safe Links Policy](#2-create-a-safe-links-policy)
 3. [Create a Microsoft Azure Portal Account](#3-create-a-microsoft-azure-portal-account)
 4. [Set Up a Billing Alert in Azure](#4-set-up-a-billing-alert-in-azure)
 5. [Create a Log Analytics Workspace](#5-create-a-log-analytics-workspace)
@@ -44,11 +44,20 @@ Created two new user accounts in the Microsoft 365 admin centre and assigned Mic
 
 ---
 
-### 2. Assign Microsoft 365 E5 Licence to Your User
+### 2.Create a Safe Links Policy
 
-Assigned the Microsoft 365 E5 licence to my user account in the Microsoft 365 admin centre. This activates the full suite of security features under that account, including Microsoft Defender for Endpoint and Defender for Office 365, which are required for the lab environment.
+Created a Safe Links policy in the Microsoft Defender XDR portal. Safe Links protects users by scanning and rewriting URLs in emails and Office documents in real time, blocking access to malicious links at the time of click rather than at the time of delivery.
 
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/54ed9977c486c3d334af3d85e4d2a1c7de0b926e/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20115948.png)
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/d50be27a1bd06d23e453898092420ad184e58fff/mini-project-02/screenshots/Screenshot%202026-03-20%20184321.png)
+
+Before the policy was applied, URLs in emails appeared as regular hyperlinks with no scanning or protection applied.
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/56026092f3ce255adfd893a43877ffc490a64548/mini-project-02/screenshots/Screenshot%202026-03-20%20185924.png)
+
+After the policy was applied, URLs are rewritten and routed through Microsoft's Safe Links scanning service before the user can access them.
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/9e92e93e298b1809491908c4fba0ac13f30de168/mini-project-02/screenshots/Screenshot%202026-03-20%20190900.png)
+
 
 ---
 
