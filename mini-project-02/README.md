@@ -1,4 +1,4 @@
-# Mini Project 02 — A: Email Threat Detection & Phishing Simulation
+# Mini Project 02 — Email Threat Detection & Phishing Simulation
 
 **Tools Used:** Microsoft Defender XDR ·  Microsoft Outlook  
 **Focus:** Email threat detection, phishing simulation, and email security policy configuration
