@@ -15,7 +15,7 @@ This project explores email threat detection and phishing simulation using the M
 
 1. [Create Users and Assign Microsoft 365 E5 Licences](#1-create-users-and-assign-microsoft-365-e5-licences)
 2. [Create a Safe Links Policy](#2-create-a-safe-links-policy)
-3. [Create a Microsoft Azure Portal Account](#3-create-a-microsoft-azure-portal-account)
+3. [Create an Anti-Phishing Policy](#3-create-an-anti-phishing-policy)
 4. [Set Up a Billing Alert in Azure](#4-set-up-a-billing-alert-in-azure)
 5. [Create a Log Analytics Workspace](#5-create-a-log-analytics-workspace)
 6. [Set Up Microsoft Sentinel](#6-set-up-microsoft-sentinel)
@@ -61,11 +61,11 @@ After the policy was applied, URLs are rewritten and routed through Microsoft's 
 
 ---
 
-### 3. Create a Microsoft Azure portal account.
+### 3. Create an Anti-Phishing Policy
 
-Created a Microsoft Azure portal account with a free trial. This links the Azure environment to the existing Microsoft 365 tenant, allowing resources like Log Analytics Workspace and Microsoft Sentinel to be deployed and connected to the security tools already configured in the Microsoft 365 admin centre.
+Created an anti-phishing policy in the Microsoft Defender XDR portal to protect users against phishing attacks including impersonation attempts, spoof emails, and malicious senders.
 
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/4d9ae558838250b4427ed21d5ca971d7d015fe84/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20120547.png)
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/ebe2b383e1cf46c3fa852762f040df70acb3bab9/mini-project-02/screenshots/Screenshot%202026-03-21%20212435.png)
 
 ---
 
