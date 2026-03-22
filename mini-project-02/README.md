@@ -16,12 +16,11 @@ This project explores email threat detection and phishing simulation using the M
 1. [Create Users and Assign Microsoft 365 E5 Licences](#1-create-users-and-assign-microsoft-365-e5-licences)
 2. [Create a Safe Links Policy](#2-create-a-safe-links-policy)
 3. [Create an Anti-Phishing Policy](#3-create-an-anti-phishing-policy)
-4. [Set Up a Billing Alert in Azure](#4-set-up-a-billing-alert-in-azure)
-5. [Create a Log Analytics Workspace](#5-create-a-log-analytics-workspace)
-6. [Set Up Microsoft Sentinel](#6-set-up-microsoft-sentinel)
-7. [Export Activity Logs from Azure Subscription to Log Analytics Workspace](#7-export-activity-logs-from-azure-subscription-to-log-analytics-workspace)
-8. [Install AzureActivity Solution from Content Hub](#8-install-azureactivity-solution-from-content-hub)
-9. [Install Microsoft Sentinel Training Lab Solution](#9-install-microsoft-sentinel-training-lab-solution)
+4. [Report a Phishing Email and Review in Defender](#4-report-a-phishing-email-and-review-in-defender)
+5. [Run a Phishing Email Test on User Account](#5-run-a-phishing-email-test-on-user-account)
+6. [Launch a Phishing Simulation from Microsoft Defender](#6-launch-a-phishing-simulation-from-microsoft-defender)
+7. [Click the Phishing Link as the Target User](#7-click-the-phishing-link-as-the-target-user)
+8. [Review the Phishing Simulation Report](#8-review-the-phishing-simulation-report)
 10. [Create a Microsoft Sentinel Workbook](#10-create-a-microsoft-sentinel-workbook)
 11. [Install Microsoft Defender XDR Data Connector](#11-install-microsoft-defender-xdr-data-connector)
 12. [Create a Detection Rule for Brute Force Attacks](#12-create-a-detection-rule-for-brute-force-attacks)
@@ -44,7 +43,7 @@ Created two new user accounts in the Microsoft 365 admin centre and assigned Mic
 
 ---
 
-### 2.Create a Safe Links Policy
+### 2. Create a Safe Links Policy
 
 Created a Safe Links policy in the Microsoft Defender XDR portal. Safe Links protects users by scanning and rewriting URLs in emails and Office documents in real time, blocking access to malicious links at the time of click rather than at the time of delivery.
 
@@ -69,121 +68,51 @@ Created an anti-phishing policy in the Microsoft Defender XDR portal to protect 
 
 ---
 
-### 4. Set Up a Billing Alert in Azure
+### 4. Report a Phishing Email and Review in Defender
 
-Configured a billing alert in the Azure Cost Management portal to monitor spending and avoid unexpected charges during the lab. Set a budget threshold so an email notification is triggered if costs approach the defined limit.
+Reported the test emails as phishing directly from Outlook. The submission appeared in the Actions & Submissions tab in the Microsoft Defender XDR portal, confirming that user-reported phishing emails are captured and queued for review by the security team. 
 
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/c547ca00972c2f7669dee5d97a79a1a3934dcbb7/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20121112.png)
-
----
-
-### 5. Create a Log Analytics Workspace
-
-Created a Log Analytics Workspace in the Azure portal. This serves as the central data store where all logs and security events are collected, stored, and queried. Microsoft Sentinel is built on top of the Log Analytics Workspace, making this a foundational step before any detection or monitoring can be configured.
-
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/405f12d26e3eab881ec977ae8f2e29f19b1126bb/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20121711.png)
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/f018441d81959ba7d13bbba96d185c6c30017fe6/mini-project-02/screenshots/Screenshot%202026-03-22%20150255.png)
 
 ---
 
-### 6. Set Up Microsoft Sentinel
+### 5. Run a Phishing Email Test on User Account
 
-Deployed Microsoft Sentinel and connected it to the Log Analytics Workspace created in the previous step. Sentinel acts as the SIEM and SOAR solution for this lab, providing a centralised platform for threat detection, incident investigation, and automated response across the environment.
+Sent a simulated phishing email to Bob's account to test the effectiveness of the policies applied. The email was automatically directed to the junk folder rather than the inbox, with a notification warning that the sender is not frequently contacted. This confirms that the anti-phishing and Safe Links policies are working as intended
 
-> [!NOTE]
-> Microsoft Sentinel has migrated to the Microsoft Defender portal. All Sentinel features including incidents, analytics rules, and workbooks are now accessible directly within the unified Defender portal, bringing SIEM and XDR capabilities together in a single interface.
-
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/8d1f44715102abbff8fdecccafc6bfbc194f3354/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20122426.png))
-
----
-
-### 7. Export Activity Logs from Azure Subscription to Log Analytics Workspace
-
-Exported the Azure subscription's activity logs to the Log Analytics Workspace. Specifically administrative, security and alert logs were ingested.
-
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/56cc2083e5f4df758dfc9dcdb751f161f37b6f97/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20105814.png)
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/42faf917995624589b34e7f96349405d1b76da9a/mini-project-02/screenshots/Screenshot%202026-03-22%20151446.png)
 
 
 ---
 
-### 8. Install AzureActivity Solution from Content Hub
+### 6. Launch a Phishing Simulation from Microsoft Defender
 
-Installed the AzureActivity solution from the Content Hub in Microsoft Sentinel.This will enable the logs that we wanted to be exported from the Azure to be ingested into Microsoft Sentinel through pre-built data connectors, analytics rules, and workbooks specifically designed to monitor and detect threats based on Azure subscription activity logs.
+Launched a phishing simulation using the Attack Simulation Training feature in the Microsoft Defender XDR portal. The simulation sent a realistic phishing email to the test users to evaluate how they respond to a real-world phishing attempt
 
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/1909ea4991e7152046e003f1695ab38556b47b16/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20110736.png)
-
----
-
-### 9.  Install Microsoft Sentinel Training Lab Solution
-
-Installed the Microsoft Sentinel Training Lab solution from the Azure portal. This deploys a set of pre-configured sample data, analytics rules, incidents, and workbooks designed specifically for hands-on learning into detection and investigating simulating a real-world production environment.
-
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/ccb96c9d2e3bfde3745967206293e63b3e2c4d5a/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20111946.png)
-
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/e7cc0c6f339a78e2b52057a5910b462f6c3a4530/mini-project-02/screenshots/Screenshot%202026-03-22%20152758.png)
 
 ---
 
-### 10. Create a Microsoft Sentinel Workbook
+### 7. Click the Phishing Link as the Target User
 
-Created a custom Microsoft Sentinel Workbook to visualise key authentication activity across the environment, including failed logins by account, successful logins by computer, and sign-in activity by location. This provides a centralised view for monitoring access patterns and identifying suspicious behaviour.
+Logged in as the target user and clicked the phishing link in the simulated email. Upon clicking, a landing page was displayed informing the user that they had fallen for a phishing simulation. 
 
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/52ba35dee19bc07dbbe05d7ca92e2dda619de522/mini-project-02/screenshots/Screenshot%202026-03-22%20153211.png)
 
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/bb24151d8bade3b2b63aefd26e4192ef9813d995/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20113544.png)
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/bb24151d8bade3b2b63aefd26e4192ef9813d995/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20113643.png)
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/bb24151d8bade3b2b63aefd26e4192ef9813d995/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20113702.png)
+Immediately after, the user received an automated training email, simulating how organisations deliver security awareness training to employees who interact with phishing content in a real SOC environment.
 
----
-
-### 11. Install Microsoft Defender XDR Data Connector
-
-Installed the Microsoft Defender XDR data connector in Microsoft Sentinel to integrate alerts and incidents from Defender XDR into the Sentinel environment. For this lab, Microsoft Defender Alerts were selected so that it brings Defender alerts and associated evidence directly into Sentinel for investigation. This includes alerts from endpoint, office 365, cloud app security and identity platforms.
-
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/6fd5a47bda04ab66b893352f6ea5b983ecba9841/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20120256.png)
-
-
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/d6827ef2eee5f37a14a7fdb067de908ad4847d98/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20115515.png)
-
-### 12.  Create a Detection Rule for Brute Force Attacks
-
-Created an analytics rule in Microsoft Sentinel using the sample data provided by the Training Lab solution to test and validate detection logic in the lab environment.
-The rule queries the SecurityEvent_CL table for Event ID 4625 (failed logon), summarises the count by account, and triggers an alert when an account reaches 1000 or more failed logons.As this is a test environment, the rule runs every 5 minutes against the last 1 day of data and generates a medium severity incident automatically when results are returned.
-
-Query used:
-```
-SecurityEvent_CL 
-|where EventID_s == "4625" 
-|summarize FailedLogons = count() by Account_s
-|where FailedLogons >= 1000
-|sort by FailedLogons desc
-```
-
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/cd999079eed241aaa341dbd52091d07e0c800527/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20121411.png)
-
-Once saved, the rule successfully triggered an alert in Microsoft Sentinel, confirming that the detection logic was working as expected against the training data.
-
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/4d00f297e255e47a583b3a52b4da1c2436273543/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20121640.png)
-
-### 13. Create a Bookmark for a Suspicious Event
-
-While investigating the Microsoft Sentinel Training Lab sample data, identified a suspicious `FileAccessed` event originating from an unknown IP address. Bookmarked the event to preserve it as evidence and flag it for further investigation.
-
-Query Used:
-```
-OfficeActivity_CL 
-|where Operation_s == "FileAccessed"
-```
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/7ad1690f88a7510376c67eaaf4f716901f9e3efd/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20124437.png)
-
-Next, this bookmark was escaled as an incident for further investigation.
-
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/9836c38d1f3cf5a5fbb920bc8dd71999b17eed86/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20125414.png)
-
-
-
-
-
-
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/02f95811d690b154f8200b63f09161711fea3b2b/mini-project-02/screenshots/Screenshot%202026-03-22%20153642.png)
 
 ---
+
+###  8. Review the Phishing Simulation Report and URL Click Activity
+
+Reviewed the simulation report in the Attack Simulation Training section of the Microsoft Defender XDR portal, which provided a breakdown of which users clicked the phishing link, who reported it, and who completed the follow-up training. Additionally, checked the URL click activity in Threat Explorer to confirm the phishing link click was logged and visible from a threat hunting perspective.
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/65fcc3de902953b8f0f8736da0f1987907524bd1/mini-project-02/screenshots/Screenshot%202026-03-22%20154240.png)
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/8c6df92f8cbc75fea444f93419b2a4f39835f7fb/mini-project-02/screenshots/Screenshot%202026-03-22%20154916.png)
+
 
 ## Key Takeaways
 
