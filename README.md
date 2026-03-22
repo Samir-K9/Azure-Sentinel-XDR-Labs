@@ -9,7 +9,7 @@ A collection of hands-on mini projects documenting my learning journey with Micr
 | Folder | Title | Focus |
 |--------|-------|-------|
 | [`mini-project-01`](./mini-project-01/) | SOC Foundations with Sentinel & Defender | Setup, KQL, detection, incident investigation |
-| `mini-project-02` | *(Coming soon)* | — |
+| [`mini-project-02`](./mini-project-02/) | *(Coming soon)* | — |
 | `mini-project-03` | *(Coming soon)* | — |
 | `mini-project-04` | *(Coming soon)* | — |
 
