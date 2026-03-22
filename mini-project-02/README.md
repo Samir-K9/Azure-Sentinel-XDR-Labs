@@ -1,13 +1,13 @@
 # Mini Project 02 — Email Threat Detection & Phishing Simulation
 
-**Tools Used:** Microsoft Defender XDR ·  Microsoft Outlook  
+**Tools Used:** Microsoft Defender XDR · Microsoft 365 Admin Centre · Attack Simulation Training · Microsoft Outlook
 **Focus:** Email threat detection, phishing simulation, and email security policy configuration
 
 ---
 
 ## Overview
 
-This project explores email threat detection and phishing simulation using the Microsoft Defender XDR portal. The goal was to understand how email-based attacks are detected, simulate real-world phishing scenarios, and configure policies to protect users against email threats.
+This project explores email threat detection and phishing simulation using the Microsoft Defender XDR portal. The goal was to configure email security policies, simulate a real-world phishing attack, investigate user interaction using Threat Explorer, and document findings in a formal incident report.
 
 ---
 
@@ -100,7 +100,7 @@ Immediately after, the user received an automated training email, simulating how
 
 ---
 
-###  8. Review the Phishing Simulation Report and URL Click Activity
+### 8. Review the Phishing Simulation Report and URL Click Activity
 
 Reviewed the simulation report in the Attack Simulation Training section of the Microsoft Defender XDR portal, which provided a breakdown of which users clicked the phishing link, who reported it, and who completed the follow-up training. Additionally, checked the URL click activity in Threat Explorer to confirm the phishing link click was logged and visible from a threat hunting perspective.
 
@@ -110,13 +110,12 @@ Reviewed the simulation report in the Attack Simulation Training section of the 
 
 
 ## Key Takeaways
-
-- The Log Analytics Workspace is the foundation of the entire setup because Sentinel cannot be deployed without it.
-- Connecting Defender XDR to Sentinel unifies alerts across endpoints, identity, and email into a single investigation interface.
-- The Training Lab solution provides realistic sample data to test detection rules and queries without needing live events.
-- Writing KQL queries to detect evens showed how attack patterns like brute force can be translated into actionable alerts.
-- Building a Sentinel Workbook provides a visual dashboard for monitoring and identifying suspicious patterns.
-- Bookmarks can help track suspicious findings which can be escalated as incidents for further investigation.
+- Safe Links rewrites URLs in real time, meaning protection is applied at the time of click rather than at delivery.
+- Anti-phishing policies add an important layer of protection against impersonation and spoofed senders that basic spam filters may miss.
+- Even with policies in place, users can still interact with phishing emails.
+- Attack Simulation Training provides a realistic way to test user behaviour and measure the effectiveness of security awareness across the organisation.
+- Threat Explorer gives visibility into URL click activity, allowing analysts to identify which users interacted with malicious links during an investigation.
+- User-reported phishing submissions in the Actions & Submissions helps the security team improve detection and policy tuning.
 ---
 
 ## Findings & Incident Report
@@ -128,7 +127,7 @@ After simulating a phishing email, I investigated the results using Threat Explo
 
 ## What's Next
 
-**Mini Project 02** — KQL queries, threat hunting, and custom detection rules
+**Mini Project 03** — 
 
 ---
 
