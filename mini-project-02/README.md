@@ -20,12 +20,7 @@ This project explores email threat detection and phishing simulation using the M
 5. [Run a Phishing Email Test on User Account](#5-run-a-phishing-email-test-on-user-account)
 6. [Launch a Phishing Simulation from Microsoft Defender](#6-launch-a-phishing-simulation-from-microsoft-defender)
 7. [Click the Phishing Link as the Target User](#7-click-the-phishing-link-as-the-target-user)
-8. [Review the Phishing Simulation Report](#8-review-the-phishing-simulation-report)
-10. [Create a Microsoft Sentinel Workbook](#10-create-a-microsoft-sentinel-workbook)
-11. [Install Microsoft Defender XDR Data Connector](#11-install-microsoft-defender-xdr-data-connector)
-12. [Create a Detection Rule for Brute Force Attacks](#12-create-a-detection-rule-for-brute-force-attacks)
-
-
+8. [Review the Phishing Simulation Report and URL Click Activity](#8-review-the-phishing-simulation-report-and-url-click-activity)
 ---
 
 ## Steps
@@ -125,7 +120,8 @@ Reviewed the simulation report in the Attack Simulation Training section of the 
 ---
 
 ## Findings & Incident Report
-After the brute force detection rule triggered an alert in the Microsoft Sentinel Training Lab, I investigated the incident using KQL queries to identify accounts with the most failed logons and determine whether any successful logins followed. The findings were documented in a formal incident report following a standard SOC reporting structure.
+After simulating a phishing email, I investigated the results using Threat Explorer to identify which users interacted with the phishing email and whether the configured policies detected and responded to the threat. The findings were documented in a formal incident report following a standard SOC reporting structure.
+
 
 [📄 View Incident Report](INCIDENT-REPORT.md)
 
