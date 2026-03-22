@@ -1,13 +1,13 @@
 # Mini Project 01 — SOC Foundations with Sentinel & Defender
 
-**Tools Used:** Microsoft Azure · Microsoft Sentinel · Microsoft Defender XDR · Log Analytics Workspace  
-**Focus:** Environment setup and foundational SOC configuration
+**Tools Used:**  Microsoft 365 Admin Centre · Microsoft Azure · Microsoft Sentinel · Microsoft Defender XDR · Log Analytics Workspace 
+**Focus:** Environment setup, log ingestion, threat detection, .and foundational SOC configuration
 
 ---
 
 ## Overview
 
-This project documents the full setup of a cloud-based SOC lab environment using Microsoft Azure, Sentinel, and Defender XDR. The goal was to build a working detection and monitoring environment from scratch before moving into KQL queries, alerts, and dashboards in later projects.
+This project documents the full setup of a cloud-based SOC lab environment using Microsoft Azure, Sentinel, and Defender XDR. Starting from account creation through to log ingestion, detection rules, workbooks, and incident investigation.
 
 ---
 
@@ -47,7 +47,7 @@ Assigned the Microsoft 365 E5 licence to my user account in the Microsoft 365 ad
 
 ---
 
-### 3. Create a Microsoft Azure portal account.
+### 3. Create a Microsoft Azure portal account
 
 Created a Microsoft Azure portal account with a free trial. This links the Azure environment to the existing Microsoft 365 tenant, allowing resources like Log Analytics Workspace and Microsoft Sentinel to be deployed and connected to the security tools already configured in the Microsoft 365 admin centre.
 
@@ -78,7 +78,7 @@ Deployed Microsoft Sentinel and connected it to the Log Analytics Workspace crea
 > [!NOTE]
 > Microsoft Sentinel has migrated to the Microsoft Defender portal. All Sentinel features including incidents, analytics rules, and workbooks are now accessible directly within the unified Defender portal, bringing SIEM and XDR capabilities together in a single interface.
 
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/8d1f44715102abbff8fdecccafc6bfbc194f3354/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20122426.png))
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/8d1f44715102abbff8fdecccafc6bfbc194f3354/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-19%20122426.png)
 
 ---
 
@@ -159,15 +159,9 @@ OfficeActivity_CL
 ```
 ![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/7ad1690f88a7510376c67eaaf4f716901f9e3efd/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20124437.png)
 
-Next, this bookmark was escaled as an incident for further investigation.
+Next, this bookmark was escalated as an incident for further investigation.
 
 ![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/9836c38d1f3cf5a5fbb920bc8dd71999b17eed86/mini-project-01/%20%20%20screenshots/Screenshot%202026-03-20%20125414.png)
-
-
-
-
-
-
 
 ---
 
@@ -189,7 +183,7 @@ After the brute force detection rule triggered an alert in the Microsoft Sentine
 
 ## What's Next
 
-**Mini Project 02** — KQL queries, threat hunting, and custom detection rules
+**Mini Project 02** — Email threat detection, phishing simulation, and email security policy configuration using Microsoft Defender XDR.
 
 ---
 
