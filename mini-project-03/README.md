@@ -4,10 +4,9 @@
 1. [Create a Windows 11 VM in VMware Workstation Pro](#1-create-a-windows-11-vm-in-vmware-workstation-pro)
 2. [Configure Advanced Features in Microsoft Defender](#2-configure-advanced-features-in-microsoft-defender)
 3. [Onboard the VM to Microsoft Defender for Endpoint](#3-onboard-the-vm-to-microsoft-defender-for-endpoint)
-4.  [Run the Onboarding Package](#4-run-the-onboarding-package)
-5. [Run a Phishing Email Test on User Account](#5-run-a-phishing-email-test-on-user-account)
-6. [Launch a Phishing Simulation from Microsoft Defender](#6-launch-a-phishing-simulation-from-microsoft-defender)
-7. [Click the Phishing Link as the Target User](#7-click-the-phishing-link-as-the-target-user)
+4. [Run the Onboarding Package](#4-run-the-onboarding-package)
+5. [Configure Automatic Enrollment in Intune](#5-configure-automatic-enrollment-in-intune)
+6. [Enable Microsoft Defender for Endpoint Integration in Intune](#6-enable-microsoft-defender-for-endpoint-integration-in-intune)7. [Click the Phishing Link as the Target User](#7-click-the-phishing-link-as-the-target-user)
 8. [Review the Phishing Simulation Report and URL Click Activity](#8-review-the-phishing-simulation-report-and-url-click-activity)
 ---
 
@@ -25,10 +24,10 @@ Created a Windows 11 virtual machine using VMware Workstation Pro to act as the 
 
 Navigated to Settings → Endpoints → Advanced Features in the Microsoft Defender XDR portal and enabled the following settings before onboarding the endpoint:
 
-#### EDR in Block Mode — allows Defender for Endpoint to block malicious artifacts even when a third-party antivirus is the primary solution.
-#### Custom Network Indicators — enables the use of custom IP, URL, and domain indicators for threat detection and blocking.
-#### Web Content Filtering — allows monitoring and blocking of websites based on content categories.
-#### Microsoft Intune Connection — links Defender for Endpoint with Intune to enable unified endpoint security and compliance management.
+- EDR in Block Mode: allows Defender for Endpoint to block malicious artifacts even when a third-party antivirus is the primary solution.
+- Custom Network Indicators: enables the use of custom IP, URL, and domain indicators for threat detection and blocking.
+- Web Content Filtering: allows monitoring and blocking of websites based on content categories.
+- Microsoft Intune Connection: links Defender for Endpoint with Intune to enable unified endpoint security and compliance management.
 
 ---
 
@@ -50,18 +49,42 @@ Once successfully onboarded, the device appeared under Assets → Devices in the
 
 ![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/044031380c449abc532796bec582359a5998765c/mini-project-03/screenshots/Screenshot%202026-03-26%20113618.png)
 
+---
+
+### 5. Configure Automatic Enrollment in Microsoft Intune
+
+Navigated to Intune → Devices → Onboarding → Enrollment → Automatic Enrollment and set the MDM User Scope to All. This enables all users in the tenant to have their devices automatically enrolled into Intune mobile device management when they sign in, allowing Intune to manage and apply policies to the onboarded VM.
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/40296d6b1b26f7485da40294dcfc587da45e513f/mini-project-03/screenshots/Screenshot%202026-03-26%20114600.png)
+
+Since the VM was already signed in using Bob Smith's account, the device appeared automatically in Intune under Devices, confirming successful enrollment.
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/a57c619134c2cedb77170adfe6fdc29dd102868e/mini-project-03/screenshots/Screenshot%202026-03-26%20114827.png)
 
 ---
 
-### 5. Run a Phishing Email Test on User Account
+### 6. Enable Microsoft Defender for Endpoint Integration in Intune
 
-Sent a simulated phishing email to Bob's account to test the effectiveness of the policies applied. The email was automatically directed to the junk folder rather than the inbox, with a notification warning that the sender is not frequently contacted. This confirms that the anti-phishing and Safe Links policies are working as intended
+Navigated to Endpoint Security → Microsoft Defender for Endpoint in Intune and enabled the following two settings:
 
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/42faf917995624589b34e7f96349405d1b76da9a/mini-project-02/screenshots/Screenshot%202026-03-22%20151446.png)
+- Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations: allows Defender for Endpoint to push and enforce security configurations directly on managed devices
+- Connect Windows devices version 10.0.15063 and above to Microsoft Defender for Endpoint: enables Windows 10 and Windows 11 devices enrolled in Intune to be connected to and monitored by Defender for Endpoint
 
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/df0181ac5a90b5a65455d84b131e14b5aedb9bdf/mini-project-03/screenshots/Screenshot%202026-03-26%20115526.png)
 
 ---
 
-### 6. Launch a Phishing Simulation from Microsoft Defender
+### 7. Create an Attack Surface Reduction Policy
 
-Launched a phishing simulation using the Attack Simulation Training feature in the Microsoft Defender XDR portal. The simulation sent a realistic phishing email to the test users to evaluate how they respond to a real-world phishing attempt
+Created an Attack Surface Reduction (ASR) policy in Intune to reduce the attack surface of the onboarded endpoint by blocking common attack techniques. As this is a test environment, only a few rules were enabled. The policy was applied to all devices in the tenant. Rules applied:
+
+- Block all Office applications from creating child processes: prevents Office applications like Word and Excel from spawning child processes, a common technique used by malware delivered through malicious documents.
+- Block credential stealing from the Windows local security authority subsystem: protects the LSASS process from being dumped by attackers attempting to harvest credentials from memory.
+- Use advanced protection against ransomware: enables heuristic-based protection to detect and block ransomware behaviour before it can encrypt files.
+- Block process creations originating from PSExec and WMI commands: prevents attackers from using PSExec and WMI as lateral movement or remote execution techniques, commonly seen in living-off-the-land attacks.
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/bf428f06fa61ce6a2b3fbf7c4f61b16e3b264f55/mini-project-03/screenshots/Screenshot%202026-03-26%20120511.png)
+
+---
+
+
