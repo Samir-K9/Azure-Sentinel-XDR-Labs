@@ -3,7 +3,8 @@
 
 1. [Create a Windows 11 VM in VMware Workstation Pro](#1-create-a-windows-11-vm-in-vmware-workstation-pro)
 2. [Configure Advanced Features in Microsoft Defender](#2-configure-advanced-features-in-microsoft-defender)
-3. [Onboard the VM to Microsoft Defender for Endpoint](#3-onboard-the-vm-to-microsoft-defender-for-endpoint)4. [Report a Phishing Email and Review in Defender](#4-report-a-phishing-email-and-review-in-defender)
+3. [Onboard the VM to Microsoft Defender for Endpoint](#3-onboard-the-vm-to-microsoft-defender-for-endpoint)
+4.  [Run the Onboarding Package](#4-run-the-onboarding-package)
 5. [Run a Phishing Email Test on User Account](#5-run-a-phishing-email-test-on-user-account)
 6. [Launch a Phishing Simulation from Microsoft Defender](#6-launch-a-phishing-simulation-from-microsoft-defender)
 7. [Click the Phishing Link as the Target User](#7-click-the-phishing-link-as-the-target-user)
@@ -44,6 +45,11 @@ Signed into the Windows 11 VM using Bob Smith's user account. Navigated to Setti
 Extracted the onboarding package downloaded in the previous step and ran it as administrator on the Windows 11 VM. This executes the onboarding script that registers the device with Microsoft Defender for Endpoint and begins sending security telemetry to the Defender portal
 
 ![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/f6a38c13eb9e757bfa3fa746f23c495d174938d0/mini-project-03/screenshots/Windows%2011%20x64-2026-03-26-11-33-38.png)
+
+Once successfully onboarded, the device appeared under Assets → Devices in the Microsoft Defender XDR portal, confirming the endpoint was registered and communicating with Defender.
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/044031380c449abc532796bec582359a5998765c/mini-project-03/screenshots/Screenshot%202026-03-26%20113618.png)
+
 
 ---
 
