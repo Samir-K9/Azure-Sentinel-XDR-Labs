@@ -6,7 +6,8 @@
 3. [Onboard the VM to Microsoft Defender for Endpoint](#3-onboard-the-vm-to-microsoft-defender-for-endpoint)
 4. [Run the Onboarding Package](#4-run-the-onboarding-package)
 5. [Configure Automatic Enrollment in Intune](#5-configure-automatic-enrollment-in-intune)
-6. [Enable Microsoft Defender for Endpoint Integration in Intune](#6-enable-microsoft-defender-for-endpoint-integration-in-intune)7. [Click the Phishing Link as the Target User](#7-click-the-phishing-link-as-the-target-user)
+6. [Enable Microsoft Defender for Endpoint Integration in Intune](#6-enable-microsoft-defender-for-endpoint-integration-in-intune)
+7. [Create an Attack Surface Reduction Policy](#7-create-an-attack-surface-reduction-policy)
 8. [Review the Phishing Simulation Report and URL Click Activity](#8-review-the-phishing-simulation-report-and-url-click-activity)
 ---
 
