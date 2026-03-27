@@ -8,8 +8,9 @@
 5. [Configure Automatic Enrollment in Intune](#5-configure-automatic-enrollment-in-intune)
 6. [Enable Microsoft Defender for Endpoint Integration in Intune](#6-enable-microsoft-defender-for-endpoint-integration-in-intune)
 7. [Create an Attack Surface Reduction Policy](#7-create-an-attack-surface-reduction-policy)
-8. [Review the Phishing Simulation Report and URL Click Activity](#8-review-the-phishing-simulation-report-and-url-click-activity)
----
+8. [Install Atomic Red Team on the VM](#8-install-atomic-red-team-on-the-vm)
+9. [Invoke T1547.001 and Observe Alert in Defender](#9-invoke-t1547001-and-observe-alert-in-defender)
+10. 10. ---
 
 ## Steps
 
@@ -88,4 +89,30 @@ Created an Attack Surface Reduction (ASR) policy in Intune to reduce the attack 
 
 ---
 
+### 8. Install Atomic Red Team on the VM
+
+Installed Atomic Red Team on the Windows 11 VM to simulate real-world attack techniques for testing the ASR policy and Defender for Endpoint detections.
+
+Before installation, excluded the C: drive from Windows Security to allow the Atomic Red Team files to be downloaded without being blocked by the antivirus. 
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/bee694d548baefaf3440e8ff278312c34d9eb08e/mini-project-03/screenshots/Screenshot%202026-03-27%20124656.png)
+
+Then installed Atomic Red Team using PowerShell with the following commands:
+```
+1. Install-Module -Name invoke-atomicredteam,powershell-yaml -Scope CurrentUser
+
+2. IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing); Install-AtomicRedTeam -getAtomics
+
+```
+### 9. Invoke T1547.001 and Observe Alert in Defender
+
+Invoked MITRE ATT&CK technique T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder) using Atomic Red Team on the Windows 11 VM. This technique simulates an attacker achieving persistence by adding entries to registry run keys. The following command was used:
+```
+Invoke-AtomicTest T1547.001
+```
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/36bdc178bf7c4bae9dcdab8ac56b1ad5697128f8/mini-project-03/screenshots/Screenshot%202026-03-27%20130820.png)
+
+The execution successfully triggered alerts in Microsoft Defender for Endpoint, confirming that the endpoint is actively monitoring for and detecting persistence techniques.
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/395ed99b2988fe641f9349db6b1c45158794aa02/mini-project-03/screenshots/Screenshot%202026-03-27%20131626.png)
 
