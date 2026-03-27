@@ -104,6 +104,8 @@ Then installed Atomic Red Team using PowerShell with the following commands:
 2. IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing); Install-AtomicRedTeam -getAtomics
 
 ```
+---
+
 ### 9. Invoke T1547.001 and Observe Alert in Defender
 
 Invoked MITRE ATT&CK technique T1547.001 (Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder) using Atomic Red Team on the Windows 11 VM. This technique simulates an attacker achieving persistence by adding entries to registry run keys. The following command was used:
@@ -115,4 +117,14 @@ Invoke-AtomicTest T1547.001
 The execution successfully triggered alerts in Microsoft Defender for Endpoint, confirming that the endpoint is actively monitoring for and detecting persistence techniques.
 
 ![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/395ed99b2988fe641f9349db6b1c45158794aa02/mini-project-03/screenshots/Screenshot%202026-03-27%20131626.png)
+
+---
+
+## Findings & Incident Report
+
+After running Atomic Red Team simulations, I investigated one of the alerts generated in the Defender portal, following a standard SOC analyst investigation workflow from alert triage to documented findings.
+
+[📄 View Incident Report](INCIDENT-REPORT.md)
+
+
 
