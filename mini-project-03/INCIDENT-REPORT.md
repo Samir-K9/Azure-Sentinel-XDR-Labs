@@ -48,4 +48,16 @@ The actor operated remotely through BobSmith's elevated session and sequentially
 
 ---
 
+## Evidence
+
+Alert Generated
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/dda986e308784d4496bd6ab110a4a401376e3833/mini-project-03/screenshots/Screenshot%202026-03-27%20152050.png)
+
+Malicious Registry Entries
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/c45e81181a22c3d55c1807510e2055b15efe0c1e/mini-project-03/screenshots/Screenshot%202026-03-27%20152050.png)
+
+
+
 
