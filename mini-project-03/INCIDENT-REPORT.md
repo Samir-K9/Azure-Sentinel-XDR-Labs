@@ -54,9 +54,23 @@ Alert Generated
 
 ![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/dda986e308784d4496bd6ab110a4a401376e3833/mini-project-03/screenshots/Screenshot%202026-03-27%20152050.png)
 
+Process Tree
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/30e68f39c35b56cc307b5a554b78e466b702ee40/mini-project-03/screenshots/Screenshot%202026-03-27%20153305.png)
+
 Malicious Registry Entries
 
-![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/c45e81181a22c3d55c1807510e2055b15efe0c1e/mini-project-03/screenshots/Screenshot%202026-03-27%20152050.png)
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/8763068db70d415545fa204538b7a8dab53a9baf/mini-project-03/screenshots/Screenshot%202026-03-27%20152012.png)
+
+Command Lines Used
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/ae71db10871523f535bfe29982c5024a64482290/mini-project-03/screenshots/Screenshot%202026-03-27%20154017.png)
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/ae71db10871523f535bfe29982c5024a64482290/mini-project-03/screenshots/Screenshot%202026-03-27%20154036.png)
+
+![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/ae71db10871523f535bfe29982c5024a64482290/mini-project-03/screenshots/Screenshot%202026-03-27%20154100.png)
+_
+
 
 
 
