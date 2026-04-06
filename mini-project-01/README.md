@@ -183,7 +183,7 @@ After the brute force detection rule triggered an alert in the Microsoft Sentine
 
 ## What's Next
 
-**Mini Project 02** — Email threat detection, phishing simulation, and email security policy configuration using Microsoft Defender XDR.
+**Mini Project 02** — Email Threat Detection & Phishing Simulation
 
 ---
 
