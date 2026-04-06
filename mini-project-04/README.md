@@ -110,4 +110,7 @@ Navigated to Logs under Log Management in Microsoft Sentinel to verify that the 
 
 This is the final mini project in the **Azure-Sentinel-XDR-Labs** series. Across all four projects, the lab covered foundational SOC setup, email threat detection, endpoint security, and identity protection — building a practical end-to-end SOC environment using the Microsoft security stack.
 
+*Part of the [Azure-Sentinel-XDR-Labs](../README.md) project series.*
+
+
 
