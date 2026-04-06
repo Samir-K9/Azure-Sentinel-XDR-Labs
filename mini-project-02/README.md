@@ -127,7 +127,7 @@ After simulating a phishing email, I investigated the results using Threat Explo
 
 ## What's Next
 
-**Mini Project 03** — 
+**Mini Project 03 — Endpoint Security with Microsoft Defender for Endpoint & Intune**
 
 ---
 
