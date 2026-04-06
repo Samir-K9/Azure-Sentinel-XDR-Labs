@@ -1,3 +1,15 @@
+# Mini Project 03 — Endpoint Security with Microsoft Defender for Endpoint & Intune
+
+**Tools Used:** Microsoft Defender XDR · Microsoft Intune · VMware Workstation Pro · Atomic Red Team
+**Focus:** Endpoint onboarding, device management, Attack Surface Reduction policy configuration, and threat simulation
+
+---
+
+## Overview
+
+This project covers endpoint security using Microsoft Defender for Endpoint and Microsoft Intune. The goal was to onboard a Windows 11 virtual machine to Defender for Endpoint and Intune, configure Attack Surface Reduction policies to harden the endpoint, and simulate real-world attack techniques using Atomic Red Team to validate detections in Microsoft Defender.
+
+---
 
 ## Table of Contents
 
@@ -10,7 +22,8 @@
 7. [Create an Attack Surface Reduction Policy](#7-create-an-attack-surface-reduction-policy)
 8. [Install Atomic Red Team on the VM](#8-install-atomic-red-team-on-the-vm)
 9. [Invoke T1547.001 and Observe Alert in Defender](#9-invoke-t1547001-and-observe-alert-in-defender)
-10. 10. ---
+
+ ---
 
 ## Steps
 
@@ -120,11 +133,27 @@ The execution successfully triggered alerts in Microsoft Defender for Endpoint, 
 
 ---
 
+## Key Takeaways
+
+- Enabling the Microsoft Intune connection in Defender for Endpoint is essential for unified endpoint security because without it, the two tools cannot share device information or enforce policies together.
+- The onboarding package is what connects an endpoint to Defender for Endpoint and once run, the device immediately begins sending telemetry to the Defender portal.
+- ASR rules are a powerful way to block known attack techniques at the endpoint level before they can execute, reducing reliance on detection after the fact.
+- Excluding a drive from Windows Security before installing Atomic Red Team highlights how attackers use exclusions to bypass antivirus.
+- Atomic Red Team allows SOC analysts to safely simulate MITRE ATT&CK techniques and validate whether detections are working as expected.
+- T1547.001 triggered alerts in Defender for Endpoint, confirming that persistence techniques are being actively monitored on the onboarded endpoint.
+
+---
 ## Findings & Incident Report
 
 After running Atomic Red Team simulations, I investigated one of the alerts generated in the Defender portal, following a standard SOC analyst investigation workflow from alert triage to documented findings.
 
 [📄 View Incident Report](INCIDENT-REPORT.md)
 
+## What's Next
 
+**Mini Project 04** — Identity protection and Conditional Access policy configuration using Microsoft Entra ID.
+
+---
+
+*Part of the [Azure-Sentinel-XDR-Labs](../README.md) project series.*
 
