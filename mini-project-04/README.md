@@ -1,3 +1,16 @@
+# Mini Project 04 — Identity Protection & Conditional Access with Microsoft Entra ID
+
+**Tools Used:** Microsoft Entra ID · Microsoft Sentinel · Microsoft Defender XDR · Log Analytics Workspace
+**Focus:** Conditional Access policy configuration, identity log ingestion, and Sentinel integration
+
+---
+
+## Overview
+
+This project explores identity protection using Microsoft Entra ID. The goal was to configure a Conditional Access policy to restrict access based on location, validate the policy by testing a blocked sign-in, and integrate Entra ID logs into Microsoft Sentinel for identity-based threat detection and monitoring.
+
+---
+
 ## Table of Contents
 
 1. [Create a Named Location for Canada](#1-create-a-named-location-for-canada)
@@ -82,4 +95,19 @@ Navigated to Logs under Log Management in Microsoft Sentinel to verify that the 
 ![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/e5d8d51a33f08411fea05cb34cfc62f0b6c7fef2/mini-project-04/screenshots/Screenshot%202026-04-05%20202435.png)
 
 ---
+
+## Key Takeaways
+
+- Security Defaults must be disabled before Conditional Access policies can take effect because the two cannot coexist.
+- Named Locations allow granular location-based access control, enabling policies to be applied to specific countries or IP ranges.
+- Conditional Access policies enforce Zero Trust principles.
+- Even a valid sign-in can be blocked if it does not meet the conditions defined in a Conditional Access policy.
+- Integrating Entra ID sign-in and audit logs into Sentinel extends identity visibility into the SIEM, making it possible to detect and investigate identity-based threats in one place.
+
+---
+
+## What's Next
+
+This is the final mini project in the **Azure-Sentinel-XDR-Labs** series. Across all four projects, the lab covered foundational SOC setup, email threat detection, endpoint security, and identity protection — building a practical end-to-end SOC environment using the Microsoft security stack.
+
 
