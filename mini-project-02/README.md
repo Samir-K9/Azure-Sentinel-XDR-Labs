@@ -1,6 +1,7 @@
 # Mini Project 02 — Email Threat Detection & Phishing Simulation
 
 **Tools Used:** Microsoft Defender XDR · Microsoft 365 Admin Centre · Attack Simulation Training · Microsoft Outlook
+
 **Focus:** Email threat detection, phishing simulation, and email security policy configuration
 
 ---
