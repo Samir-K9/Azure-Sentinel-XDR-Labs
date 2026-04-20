@@ -1,6 +1,7 @@
 # Mini Project 03 — Endpoint Security with Microsoft Defender for Endpoint & Intune
 
 **Tools Used:** Microsoft Defender XDR · Microsoft Intune · VMware Workstation Pro · Atomic Red Team
+
 **Focus:** Endpoint onboarding, device management, Attack Surface Reduction policy configuration, and threat simulation
 
 ---
