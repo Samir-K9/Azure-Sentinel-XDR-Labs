@@ -1,6 +1,7 @@
 # Mini Project 01 — SOC Foundations with Sentinel & Defender
 
 **Tools Used:**  Microsoft 365 Admin Centre · Microsoft Azure · Microsoft Sentinel · Microsoft Defender XDR · Log Analytics Workspace 
+
 **Focus:** Environment setup, log ingestion, threat detection, .and foundational SOC configuration
 
 ---
