@@ -73,7 +73,8 @@ Command Lines Used
 ![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/ae71db10871523f535bfe29982c5024a64482290/mini-project-03/screenshots/Screenshot%202026-03-27%20154036.png)
 
 ![Image Alt](https://github.com/Samir-K9/Azure-Sentinel-XDR-Labs/blob/ae71db10871523f535bfe29982c5024a64482290/mini-project-03/screenshots/Screenshot%202026-03-27%20154100.png)
-_
+
+---
 
 
 
