@@ -1,6 +1,7 @@
 # Mini Project 04 — Identity Protection & Conditional Access with Microsoft Entra ID
 
 **Tools Used:** Microsoft Entra ID · Microsoft Sentinel · Microsoft Defender XDR · Log Analytics Workspace
+
 **Focus:** Conditional Access policy configuration, identity log ingestion, and Sentinel integration
 
 ---
